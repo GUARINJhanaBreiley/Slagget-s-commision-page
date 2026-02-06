@@ -18,3 +18,9 @@
         }
   </style>
 </head>
+<body>
+ <div style="text-align: center;">
+    <a href="page2.html" class="next-page-btn doodle">Artworks</a>
+    <a href="page3.html" class="next-page-btn doodle" style="margin-left: 10px;">Social</a>
+</div>
+</body>
