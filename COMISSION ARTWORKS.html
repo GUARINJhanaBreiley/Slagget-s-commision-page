@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commissions Page Layout</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #509188;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
+        /* NEW: Wrapper to hold the box and the buttons together */
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers buttons horizontally */
+            gap: 20px; /* Space between the border and buttons */
+        }
+
+        .container {
+            width: 600px; 
+            height: 600px;
+            position: relative;
+            border: 3px solid #ffffff;
+            padding: 10px;
+            background-color: #509188;
+        }
+
+        header {
+            color: white;
+            padding: 5px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+        }
+
+        .gallery {
+            position: relative;
+            height: 100%;
+            width: 100%; 
+        }
+
+        .item {
+            background-color: #509188;
+            position: absolute;
+            border: 2px solid #333;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        /* Positioning Logic */
+        .item-1 { width: 60%; height: 70%; top: 20px; left: -25px; background-color: #6a0dad; z-index: 6; }
+        .item-2 { width: 35%; height: 50%; top: 50px; left: 320px; background-color: #00ff7f; z-index: 8; }
+        .item-3 { width: 35%; height: 50%; top: 180px; left: 210px; background-color: #a0522d; z-index: 8; }
+        .item-4 { width: 35%; height: 30%; bottom: 40px; left: 30px; background-color: #8b0000; z-index: 7; }
+        .item-6 { width: 65%; height: 55%; bottom: 20px; right: -30px; background-color: #4682b4; z-index: 3; }
+
+        .price {
+            position: absolute;
+            color:rgb(152, 193, 255);
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        .item img { width: 100%; height: 100%; object-fit: cover; }
+
+        .next-page-btn {
+            display: inline-block;
+            background-color: #008080;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            border: 2px solid #18597A;
+            transition: 0.3s;
+        }
+        
+        .next-page-btn:hover {
+            background-color: #006666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Wrapped everything in page-wrapper -->
+    <div class="page-wrapper">
+        
+        <div class="container">
+            <header>
+                <div class="header-text">Commissions</div>
+            </header>
+
+            <div class="gallery">
+                <div class="item item-1">
+                    <div class="price">15P</div>
+                    <img src="C:\Users\Administrator\Downloads\1be0cf79-fc47-4cd4-b3fa-e4830f2749e4.jpg" alt="Artwork 1">
+                </div>
+                
+                <div class="item item-2">
+                    <div class="price">25P</div>
+                    <img src="C:\Users\Administrator\Downloads\19d4aa2c-0710-4685-a171-623405cffdc8.jpg" alt="Artwork 2">
+                </div>
+
+                <div class="item item-3">
+                    <div class="price">20P</div>
+                    <img src="C:\Users\Administrator\Downloads\b7807ff2-590b-4266-a7b8-6557279d7166.jpg" alt="Artwork 3">
+                </div>
+
+                <div class="item item-4">
+                    <div class="price">30P</div>
+                    <img src="C:\Users\Administrator\Downloads\3eff0a21-8d31-46fb-9c57-49c024bf7249.jpg" alt="Artwork 4">
+                </div>
+
+                 <div class="item item-6">
+                    <img src="C:\Users\Administrator\Downloads\7ce6fa22-0b26-473f-9373-215aaee4a080.jpg" alt="Artwork 5">
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons are now outside the container but inside the wrapper -->
+        <div class="button-group">
+            <a href="index.html" class="next-page-btn">HOME</a>
+            <a href="COMISSION ARTWORKS.html" class="next-page-btn" style="margin-left: 10px;">COMMISSION ARTWORKS</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
